@@ -2,6 +2,7 @@ package com.example.jorlop01.objetolistas;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -22,10 +23,12 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private Titular[] datos = new Titular[]{
-            new Titular("Titulo1", "Subtitulo largo 1", R.drawable.img1),
+            new Titular("Titulo1", "ssd nmv", R.drawable.img1),
             new Titular("Titulo2", "Subtitulo largo 2", R.drawable.img2),
             new Titular("Titulo1", "Subtitulo largo 3", R.drawable.img3),
             };
+
+    Titular tit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +42,17 @@ public class MainActivity extends AppCompatActivity {
         IstOpciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView arg0, View arg1, int position, long id) {
-                String mensaje = "Titulo: " + datos[position].getTitulo() + ".Subtitulo: " + datos[position].getSubtitulo();
-                Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_LONG).show();
+                //String mensaje = "Titulo: " + datos[position].getTitulo() + ".Subtitulo: " + datos[position].getSubtitulo();
+                //Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_LONG).show();
+
+                tit =new Titular(datos[position].getTitulo(),datos[position].getSubtitulo(),datos[position].getImagen());
+
+                Intent miIntent = new Intent(MainActivity.this, MainActivity2.class);
+                Bundle miBundle = new Bundle();
+
+                miBundle.putSerializable("objeto", tit);
+                miIntent.putExtras(miBundle);
+                startActivity(miIntent);
 
             }
 
@@ -63,24 +75,7 @@ public class MainActivity extends AppCompatActivity {
             this.context = context;
         }
 
-        /*@TargetApi(Build.VERSION_CODES.LOLLIPOP)
-        @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
-        public View getView(int i, View convertView, ViewGroup parent) {
-            LayoutInflater inflater = context.getLayoutInflater();
-            View item = inflater.inflate(R.layout.activity_adapter, null);
 
-            TextView lblTitulo = (TextView) item.findViewById(R.id.tvTitulo);
-            lblTitulo.setText(datos[i].getTitulo());
-
-            TextView lblSubtitulo = (TextView) item.findViewById(R.id.tvSubtitulo);
-            lblSubtitulo.setText(datos[i].getSubtitulo());
-
-            ImageView imagen =(ImageView) item.findViewById(R.id.ivlImagen);
-            imagen.setBackground(getDrawable(datos[i].getImagen()));
-
-            return (item);
-        }
-    }*/
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
         public View getView(int position, View convertView, ViewGroup parent) {
             View item = convertView;

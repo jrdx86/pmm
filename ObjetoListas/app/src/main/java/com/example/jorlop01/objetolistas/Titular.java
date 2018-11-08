@@ -1,7 +1,9 @@
 package com.example.jorlop01.objetolistas;
 
 
-    public class Titular {
+import java.io.Serializable;
+
+public class Titular implements Serializable{
         String titulo;
         String subtitulo;
         int imagen;
@@ -15,12 +17,11 @@ package com.example.jorlop01.objetolistas;
         int getImagen(){
             return imagen;
         }
-
+        String getSubtitulo(){
+        return subtitulo;
+    }
         String getTitulo(){
             return titulo;
-        }
-        String getSubtitulo(){
-            return subtitulo;
         }
 
         void setTitulo(String tit){
