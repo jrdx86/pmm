@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Pantalla1">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alquiler de coches"/>
+        <ImageView
+            android:layout_width="300px"
+            android:layout_height="200px"
+            android:src="@drawable/c"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indique el tipo de Tarifa que desea:"/>
+    <RadioGroup
+        android:id="@+id/tarifas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/sin_seguro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sin seguro"/>
+        <RadioButton
+            android:id="@+id/con_seguro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Con seguro"/>
+    </RadioGroup>
+    <TextView
+        android:text="Indique que opción prefiere:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/aire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aire Acondicionado"/>
+        <CheckBox
+            android:id="@+id/gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPS"/>
+        <CheckBox
+            android:id="@+id/radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Radio DVD"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/horas"
+        android:hint="Número de Horas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/calcular"
+        android:text="Total precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/factura"
+        android:text="FACTURA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
