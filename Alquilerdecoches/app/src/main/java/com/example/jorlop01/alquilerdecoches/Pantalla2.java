@@ -1,6 +1,10 @@
+
 package com.example.jorlop01.alquilerdecoches;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -10,6 +14,8 @@ import android.widget.TextView;
 public class Pantalla2 extends AppCompatActivity {
     int tot;
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,22 +31,27 @@ public class Pantalla2 extends AppCompatActivity {
         final ImageView cche = (ImageView) findViewById(R.id.coche);
 
         modelo.setText(coche.getModelo());
+        tiempo.setText(String.valueOf(coche.getHoras()));
+        cche.setBackground(getDrawable(coche.getImagen()));
+
 
         if(coche.getSin_Seguro()== true){
             seguro.setText("Sin seguro");
         }
-        else if(coche.getSeguro()== true){
+        if(coche.getSeguro()== true){
             seguro.setText("Con seguro");
         }
-        else if (coche.getRadio() == true){
-            tot=+50;
+        if (coche.getRadio() == true){
+            tot+=50;
         }
-        else if (coche.getAire() == true){
-            tot=+50;
+        if (coche.getAire() == true){
+            tot+=50;
         }
-        else if(coche.getGps() == true){
-            tot=+50;
+        if(coche.getGps() == true){
+            tot+=50;
         }
+        extras.setText(String.valueOf(tot));
+
 
     }
 }

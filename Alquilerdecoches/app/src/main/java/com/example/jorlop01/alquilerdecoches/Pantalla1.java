@@ -27,10 +27,10 @@ import android.widget.Toast;
 public class Pantalla1 extends AppCompatActivity {
 
     public Coches[] coches = new Coches []{
-            new Coches("Megane","Renault",false,false,false,false,false,0,0,R.drawable.megan1),
-            new Coches("X-11","Ferrari",false,false,false,false,false,0,0,R.drawable.ferrari1),
-            new Coches("Leon","Seat",false,false,false,false,false,0,0,R.drawable.leon1),
-            new Coches("Fiesta","Ford",false,false,false,false,false,0,0,R.drawable.fiesta1)
+            new Coches("Megane","Renault",false,false,false,false,false,0,10,R.drawable.megan1),
+            new Coches("X-11","Ferrari",false,false,false,false,false,0,30,R.drawable.ferrari1),
+            new Coches("Leon","Seat",false,false,false,false,false,0,20,R.drawable.leon1),
+            new Coches("Fiesta","Ford",false,false,false,false,false,0,10,R.drawable.fiesta1)
     };
 
     public Coches [] mialquiler;
@@ -72,42 +72,49 @@ public class Pantalla1 extends AppCompatActivity {
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean flag = false;
                 if(bSin_seguro.isChecked()){
                     coches[indice].setSin_seguro(true);
-                    flag = true;
-                }else if(bSeguro.isChecked()){
+
+                }
+                if(bSeguro.isChecked()){
                     coches[indice].setSeguro(true);
-                    flag = true;
+
                 }else{
                     Toast.makeText(getApplicationContext(), "Tienes que elegir modalidad de seguro",Toast.LENGTH_SHORT).show();
-                    flag = false;
+
                 }
                 if(checkBoxAire.isChecked()){
                     coches[indice].setAire(true);
-                }else if(checkBoxGps.isChecked()){
+                }
+                if(checkBoxGps.isChecked()){
                     coches[indice].setGps(true);
-                }else if(checkBoxRadio.isChecked()){
+                }
+                if(checkBoxRadio.isChecked()){
                     coches[indice].setRadio(true);
                 }
                 String comparador = horas.getText().toString();
                 if(comparador.equalsIgnoreCase("")){
                     Toast.makeText(getApplicationContext(), "Debes introducir las horas de alquiler",Toast.LENGTH_SHORT).show();
-                    flag = false;
+
                 }else{
                     coches[indice].setHoras(Integer.parseInt(horas.getText().toString()));
                 }
-                if (flag == true){
+
                     Intent intent = new Intent(Pantalla1.this, Pantalla2.class);
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("Objeto", coches[indice]);
                     intent.putExtras(bundle);
                     startActivity(intent);
-                }
+
 
             }
         });
     }
+
+
+
+
+
 
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflate  = getMenuInflater();
@@ -135,8 +142,9 @@ public class Pantalla1 extends AppCompatActivity {
                 TextView marca = (TextView) item.findViewById(R.id.marca);
                 TextView precio = (TextView) item.findViewById(R.id.precio);
                 ImageView imagen = (ImageView) item.findViewById(R.id.coche);
+
                 modelo.setText(coches[position].getModelo());
-                modelo.setText(coches[position].getMarca());
+                marca.setText(coches[position].getMarca());
                 precio.setText(String.valueOf(coches[position].getPrecio()));
                 imagen.setBackground(getDrawable(coches[position].getImagen()));
 
