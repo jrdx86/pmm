@@ -12,7 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Pantalla2 extends AppCompatActivity {
-    int tot;
+
+    double seg,tot, extra;
+
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -33,25 +35,9 @@ public class Pantalla2 extends AppCompatActivity {
         modelo.setText(coche.getModelo());
         tiempo.setText(String.valueOf(coche.getHoras()));
         cche.setBackground(getDrawable(coche.getImagen()));
-
-
-        if(coche.getSin_Seguro()== true){
-            seguro.setText("Sin seguro");
-        }
-        if(coche.getSeguro()== true){
-            seguro.setText("Con seguro");
-        }
-        if (coche.getRadio() == true){
-            tot+=50;
-        }
-        if (coche.getAire() == true){
-            tot+=50;
-        }
-        if(coche.getGps() == true){
-            tot+=50;
-        }
-        extras.setText(String.valueOf(tot));
-
+        extras.setText(String.valueOf(extra));
+        tot = (extra +(coche.getPrecio() *coche.getHoras()))*seg;
+        total.setText(String.valueOf(tot));
 
     }
 }

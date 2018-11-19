@@ -5,10 +5,10 @@ import java.io.Serializable;
 public class Coches implements Serializable {
     public String modelo, marca;
     boolean sin_seguro=false, seguro=false,aire=false,gps=false,radio=false;
-    int horas, imagen,precio;
+    int horas, imagen,precio, extra;
 
     public Coches (String modelo, String marca, boolean sin_seguro, boolean seguro, boolean aire, boolean gps, boolean radio, int horas,
-                    int precio,int imagen){
+                    int precio, int extra, int imagen){
         this.modelo=modelo;
         this.marca=marca;
         this.sin_seguro=sin_seguro;
@@ -19,6 +19,15 @@ public class Coches implements Serializable {
         this.horas=horas;
         this.imagen=imagen;
         this.precio=precio;
+        this.extra=extra;
+
+    }
+    public void setExtra(int extra) {
+        this.extra = extra;
+    }
+
+    public int getExtra() {
+        return extra;
     }
 
     public void setModelo(java.lang.String modelo) {

@@ -27,15 +27,17 @@ import android.widget.Toast;
 public class Pantalla1 extends AppCompatActivity {
 
     public Coches[] coches = new Coches []{
-            new Coches("Megane","Renault",false,false,false,false,false,0,10,R.drawable.megan1),
-            new Coches("X-11","Ferrari",false,false,false,false,false,0,30,R.drawable.ferrari1),
-            new Coches("Leon","Seat",false,false,false,false,false,0,20,R.drawable.leon1),
-            new Coches("Fiesta","Ford",false,false,false,false,false,0,10,R.drawable.fiesta1)
+            new Coches("Megane","Renault",false,false,false,false,false,0,10,0,R.drawable.megan1),
+            new Coches("X-11","Ferrari",false,false,false,false,false,0,30,0,R.drawable.ferrari1),
+            new Coches("Leon","Seat",false,false,false,false,false,0,20,0,R.drawable.leon1),
+            new Coches("Fiesta","Ford",false,false,false,false,false,0,10,0,R.drawable.fiesta1)
     };
 
-    public Coches [] mialquiler;
+
     public int indice = 0;
     public Spinner spinner;
+    double seg,tot;
+    int extra;
 
 
     @Override
@@ -65,50 +67,66 @@ public class Pantalla1 extends AppCompatActivity {
         final CheckBox checkBoxGps = (CheckBox) findViewById(R.id.gps);
         final CheckBox checkBoxRadio = (CheckBox) findViewById(R.id.radio);
         Button calcular = (Button) findViewById(R.id.calcular);
+        Button factura = (Button) findViewById(R.id.factura);
         final RadioGroup tarifas = (RadioGroup) findViewById(R.id.tarifas);
         final EditText horas = (EditText) findViewById(R.id.horas);
         final Object texto = spinner.getSelectedItem();
+        final TextView fact = (TextView) findViewById(R.id.fact);
+
 
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(bSin_seguro.isChecked()){
                     coches[indice].setSin_seguro(true);
-
+                    seg=1;
                 }
                 if(bSeguro.isChecked()){
                     coches[indice].setSeguro(true);
-
+                    seg = 1.3;
                 }else{
                     Toast.makeText(getApplicationContext(), "Tienes que elegir modalidad de seguro",Toast.LENGTH_SHORT).show();
-
                 }
                 if(checkBoxAire.isChecked()){
                     coches[indice].setAire(true);
+                    extra+=50;
                 }
                 if(checkBoxGps.isChecked()){
                     coches[indice].setGps(true);
+                    extra+=50;
                 }
                 if(checkBoxRadio.isChecked()){
                     coches[indice].setRadio(true);
+                    extra+=50;
                 }
                 String comparador = horas.getText().toString();
                 if(comparador.equalsIgnoreCase("")){
                     Toast.makeText(getApplicationContext(), "Debes introducir las horas de alquiler",Toast.LENGTH_SHORT).show();
-
                 }else{
                     coches[indice].setHoras(Integer.parseInt(horas.getText().toString()));
                 }
 
-                    Intent intent = new Intent(Pantalla1.this, Pantalla2.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putSerializable("Objeto", coches[indice]);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
+                coches[indice].setExtra(extra);
+
+                fact.setText(String.valueOf(tot = ((coches[indice].getExtra()+(coches[indice].getPrecio()*coches[indice].getHoras())))*seg));
+
+
 
 
             }
         });
+        factura.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Pantalla1.this, Pantalla2.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("Objeto", coches[indice]);
+                intent.putExtras(bundle);
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 
