@@ -27,17 +27,16 @@ import android.widget.Toast;
 public class Pantalla1 extends AppCompatActivity {
 
     public Coches[] coches = new Coches []{
-            new Coches("Megane","Renault",false,false,false,false,false,0,10,0,R.drawable.megan1),
-            new Coches("X-11","Ferrari",false,false,false,false,false,0,30,0,R.drawable.ferrari1),
-            new Coches("Leon","Seat",false,false,false,false,false,0,20,0,R.drawable.leon1),
-            new Coches("Fiesta","Ford",false,false,false,false,false,0,10,0,R.drawable.fiesta1)
+            new Coches("Megane","Renault",false,false,false,false,false,0,10,0,0,R.drawable.megan1),
+            new Coches("X-11","Ferrari",false,false,false,false,false,0,30,0,0,R.drawable.ferrari1),
+            new Coches("Leon","Seat",false,false,false,false,false,0,20,0,0,R.drawable.leon1),
+            new Coches("Fiesta","Ford",false,false,false,false,false,0,10,0,0,R.drawable.fiesta1)
     };
 
 
     public int indice = 0;
     public Spinner spinner;
-    double seg,tot;
-    int extra;
+
 
 
     @Override
@@ -77,6 +76,9 @@ public class Pantalla1 extends AppCompatActivity {
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                double seg=0;
+                coches[indice].setExtra(0);
+
                 if(bSin_seguro.isChecked()){
                     coches[indice].setSin_seguro(true);
                     seg=1;
@@ -89,15 +91,15 @@ public class Pantalla1 extends AppCompatActivity {
                 }
                 if(checkBoxAire.isChecked()){
                     coches[indice].setAire(true);
-                    extra+=50;
+                    coches[indice].setExtra(coches[indice].getExtra() + 50);
                 }
                 if(checkBoxGps.isChecked()){
                     coches[indice].setGps(true);
-                    extra+=50;
+                    coches[indice].setExtra(coches[indice].getExtra() + 50);
                 }
                 if(checkBoxRadio.isChecked()){
                     coches[indice].setRadio(true);
-                    extra+=50;
+                    coches[indice].setExtra(coches[indice].getExtra() + 50);
                 }
                 String comparador = horas.getText().toString();
                 if(comparador.equalsIgnoreCase("")){
@@ -106,9 +108,10 @@ public class Pantalla1 extends AppCompatActivity {
                     coches[indice].setHoras(Integer.parseInt(horas.getText().toString()));
                 }
 
-                coches[indice].setExtra(extra);
 
-                fact.setText(String.valueOf(tot = ((coches[indice].getExtra()+(coches[indice].getPrecio()*coches[indice].getHoras())))*seg));
+                coches[indice].setTotal((coches[indice].getExtra()+(coches[indice].getHoras()*coches[indice].getPrecio()))*seg);
+
+                fact.setText(String.valueOf(coches[indice].getTotal()));
 
 
 

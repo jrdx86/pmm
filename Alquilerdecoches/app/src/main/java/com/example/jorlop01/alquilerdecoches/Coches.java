@@ -6,9 +6,10 @@ public class Coches implements Serializable {
     public String modelo, marca;
     boolean sin_seguro=false, seguro=false,aire=false,gps=false,radio=false;
     int horas, imagen,precio, extra;
+    double total;
 
     public Coches (String modelo, String marca, boolean sin_seguro, boolean seguro, boolean aire, boolean gps, boolean radio, int horas,
-                    int precio, int extra, int imagen){
+                    int precio, int extra, double total, int imagen){
         this.modelo=modelo;
         this.marca=marca;
         this.sin_seguro=sin_seguro;
@@ -20,8 +21,17 @@ public class Coches implements Serializable {
         this.imagen=imagen;
         this.precio=precio;
         this.extra=extra;
+        this.total=total;
 
     }
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
     public void setExtra(int extra) {
         this.extra = extra;
     }

@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class Pantalla2 extends AppCompatActivity {
 
-    double seg,tot, extra;
+
 
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -22,6 +22,7 @@ public class Pantalla2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla2);
+
 
         Intent intent = getIntent();
         Coches coche = (Coches) intent.getSerializableExtra("Objeto");
@@ -32,12 +33,12 @@ public class Pantalla2 extends AppCompatActivity {
         final TextView total = (TextView) findViewById(R.id.total);
         final ImageView cche = (ImageView) findViewById(R.id.coche);
 
+
         modelo.setText(coche.getModelo());
         tiempo.setText(String.valueOf(coche.getHoras()));
         cche.setBackground(getDrawable(coche.getImagen()));
-        extras.setText(String.valueOf(extra));
-        tot = (extra +(coche.getPrecio() *coche.getHoras()))*seg;
-        total.setText(String.valueOf(tot));
+        extras.setText(String.valueOf(coche.getExtra()));
+        total.setText(String.valueOf(coche.getTotal()));
 
     }
 }
