@@ -34,10 +34,10 @@ public class Pantalla2 extends AppCompatActivity {
         final ImageView cche = (ImageView) findViewById(R.id.coche);
 
         if(coche.getSeguro()){
-            seguro.setText("Con Seguro");
+            seguro.setText("Seguro incluido");
         }
         if(coche.getSin_Seguro()){
-            seguro.setText("Sin seguro");
+            seguro.setText("Sin seguro incluido");
         }
         modelo.setText(coche.getModelo());
         tiempo.setText(String.valueOf(coche.getHoras()));
