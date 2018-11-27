@@ -33,7 +33,12 @@ public class Pantalla2 extends AppCompatActivity {
         final TextView total = (TextView) findViewById(R.id.total);
         final ImageView cche = (ImageView) findViewById(R.id.coche);
 
-
+        if(coche.getSeguro()){
+            seguro.setText("Con Seguro");
+        }
+        if(coche.getSin_Seguro()){
+            seguro.setText("Sin seguro");
+        }
         modelo.setText(coche.getModelo());
         tiempo.setText(String.valueOf(coche.getHoras()));
         cche.setBackground(getDrawable(coche.getImagen()));
