@@ -38,7 +38,6 @@ public class Pantalla1 extends AppCompatActivity {
     public Spinner spinner;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,10 +130,6 @@ public class Pantalla1 extends AppCompatActivity {
         });
 
     }
-
-
-
-
 
 
     public boolean onCreateOptionsMenu(Menu menu){
