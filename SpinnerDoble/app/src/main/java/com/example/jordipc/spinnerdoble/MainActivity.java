@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public int indice;
 
     public Pais[] pais = new Pais[]{
-            
+
             new Pais("España ",7),
             new Pais("Francia ",8),
             new Pais("Alemania ",9)
