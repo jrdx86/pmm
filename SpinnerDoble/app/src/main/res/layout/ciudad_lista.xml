@@ -9,7 +9,20 @@
         android:orientation="horizontal">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ciudad: "/>
+
+        <TextView
             android:id="@+id/ciudad2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Población: "/>
+        <TextView
+            android:id="@+id/poblacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

@@ -21,14 +21,16 @@ public class MainActivity extends AppCompatActivity {
     public int indice;
 
     public Pais[] pais = new Pais[]{
-            new Pais("España"),
-            new Pais("Francia"),
-            new Pais("Alemania")
+            
+            new Pais("España ",7),
+            new Pais("Francia ",8),
+            new Pais("Alemania ",9)
     };
     public Ciudad[][] ciudad = new Ciudad[][]{
-            {new Ciudad("Valencia"), new Ciudad("Madrid"),new Ciudad("Sevilla")},
-            {new Ciudad("Paris"), new Ciudad("Niza"),new Ciudad("Burdeos")},
-            {new Ciudad("Berlin"), new Ciudad("Munich"),new Ciudad("Frankfurt")},
+
+            {new Ciudad("Valencia ", 1000000), new Ciudad("Madrid",600000),new Ciudad("Sevilla",500000)},
+            {new Ciudad("Paris ",8000000), new Ciudad("Niza",1000000),new Ciudad("Burdeos",200000)},
+            {new Ciudad("Berlin ",8000000), new Ciudad("Munich",5000000),new Ciudad("Frankfurt",600000)},
     };
 
 
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         spinner = (Spinner) findViewById(R.id.spinner);
-        spinner.setSelection(-1);
+
         AdaptadozZonas miAdaptador = new AdaptadozZonas(this);
         spinner.setAdapter(miAdaptador);
 
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         spinner2 = (Spinner) findViewById(R.id.spinner2);
-        spinner2.setSelection(-1);
+
         AdaptadorZonasCiudad miAdaptador1 = new AdaptadorZonasCiudad(this);
         spinner2.setAdapter(miAdaptador1);
 
@@ -81,9 +83,10 @@ public class MainActivity extends AppCompatActivity {
             LayoutInflater inflater = context.getLayoutInflater();
             View item = inflater.inflate(R.layout.pais_lista, null);
             TextView Pais = (TextView) item.findViewById(R.id.pais);
-            TextView Ciudad = (TextView) item.findViewById(R.id.ciudad);
+            TextView Capital = (TextView) item.findViewById(R.id.capital);
 
             Pais.setText(pais[position].getPais());
+            Capital.setText(String.valueOf(pais[position].getCapitales()));
 
             return item;
         }
@@ -108,9 +111,12 @@ public class MainActivity extends AppCompatActivity {
             View item = inflater.inflate(R.layout.ciudad_lista, null);
 
             TextView Ciudad = (TextView) item.findViewById(R.id.ciudad2);
+            TextView Poblacion = (TextView)item.findViewById(R.id.poblacion);
 
 
             Ciudad.setText(ciudad[indice][position].getCiudad());
+            //hay que hacer un cast a string ya que el metodo setText() solo acepta string
+            Poblacion.setText(String.valueOf(ciudad[indice][position].getPoblacion()));
 
             return item;
 

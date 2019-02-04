@@ -1,0 +1,145 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+MERGED from [com.android.support:appcompat-v7:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha1.aar/d22e79eea6d175deb913e09ce58c4067/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:support-fragment:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0-alpha1.aar/85aea32e622c5204d9608d0294da540b/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0-alpha1.aar/62ca30c246657e1a2c793e2622a5a656/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:support-core-ui:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0-alpha1.aar/0464c17e938b5cd156abaf0068a25bb2/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:support-core-utils:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0-alpha1.aar/fe470009907955005ebf3ec5fffd51d8/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0-alpha1.aar/1823a3e59017c8d4177ce44ca07064a9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/loader-28.0.0-alpha1.aar/ffc09245b4f4165d58e5654a1bf65633/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:viewpager:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0-alpha1.aar/9e86ce4e5a445eeb72e35e724da9dda9/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0-alpha1.aar/0039341ece485f6a7fdbcd8964c61c29/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:drawerlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0-alpha1.aar/333a1f8dc9b89c0189be8ba8e5bef6b5/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0-alpha1.aar/96f7946c427b490d4095d959e03b5aac/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:customview:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/customview-28.0.0-alpha1.aar/35ece4bff7d309808107fef1796123ef/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0-alpha1.aar/888416bde8308ef575bdd36ec6b5966c/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0-alpha1.aar/e79042f18b4bd799abeea13f3bce6f90/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:support-compat:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha1.aar/4f81c1933e09fe280e2c5f526ad5dfe0/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:documentfile:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0-alpha1.aar/4ef4e3cf81ce3cd3f8b1d3a15145f27c/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0-alpha1.aar/5520799c117480d8f084701cf2568481/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:print:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/print-28.0.0-alpha1.aar/c9f4c29975483fa1d5b334f53b186d86/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:interpolator:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0-alpha1.aar/10e5a30e38e01e2052f1cd2cd693fa76/AndroidManifest.xml:17:1-23:12
+MERGED from [com.android.support:cursoradapter:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0-alpha1.aar/dcce913609ae5030be48034eea2420b6/AndroidManifest.xml:17:1-23:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0e3f0b3296bb736c232b09308191fd3f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8fae72b406fd9d68d5db91357e9bfe1b/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/d4aa7ab182e1c25ea4a24479109afe6d/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f45e3dd7e1a25b0958a5337b862c5e65/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+	package
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:2:5-43
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:1-21:12
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:4:5-20:19
+	android:supportsRtl
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:9:9-35
+	android:label
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:7:9-41
+	android:roundIcon
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:8:9-54
+	android:icon
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:6:9-43
+	android:allowBackup
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:5:9-35
+	android:theme
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:10:9-40
+activity#com.example.jordipc.solobici.SoloBici
+ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:11:9-17:20
+	android:name
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:11:19-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:12:13-16:29
+action#android.intent.action.MAIN
+ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:13:17-69
+	android:name
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:15:17-77
+	android:name
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:15:27-74
+activity#com.example.jordipc.solobici.AcercaDe
+ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:18:9-55
+	android:name
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:18:19-43
+activity#com.example.jordipc.solobici.Juego
+ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:19:9-52
+	android:name
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml:19:19-40
+uses-sdk
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha1.aar/d22e79eea6d175deb913e09ce58c4067/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha1.aar/d22e79eea6d175deb913e09ce58c4067/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-fragment:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0-alpha1.aar/85aea32e622c5204d9608d0294da540b/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-fragment:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0-alpha1.aar/85aea32e622c5204d9608d0294da540b/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0-alpha1.aar/62ca30c246657e1a2c793e2622a5a656/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0-alpha1.aar/62ca30c246657e1a2c793e2622a5a656/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0-alpha1.aar/0464c17e938b5cd156abaf0068a25bb2/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0-alpha1.aar/0464c17e938b5cd156abaf0068a25bb2/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0-alpha1.aar/fe470009907955005ebf3ec5fffd51d8/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0-alpha1.aar/fe470009907955005ebf3ec5fffd51d8/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0-alpha1.aar/1823a3e59017c8d4177ce44ca07064a9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0-alpha1.aar/1823a3e59017c8d4177ce44ca07064a9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/loader-28.0.0-alpha1.aar/ffc09245b4f4165d58e5654a1bf65633/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:loader:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/loader-28.0.0-alpha1.aar/ffc09245b4f4165d58e5654a1bf65633/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:viewpager:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0-alpha1.aar/9e86ce4e5a445eeb72e35e724da9dda9/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:viewpager:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0-alpha1.aar/9e86ce4e5a445eeb72e35e724da9dda9/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0-alpha1.aar/0039341ece485f6a7fdbcd8964c61c29/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0-alpha1.aar/0039341ece485f6a7fdbcd8964c61c29/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0-alpha1.aar/333a1f8dc9b89c0189be8ba8e5bef6b5/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0-alpha1.aar/333a1f8dc9b89c0189be8ba8e5bef6b5/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0-alpha1.aar/96f7946c427b490d4095d959e03b5aac/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0-alpha1.aar/96f7946c427b490d4095d959e03b5aac/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:customview:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/customview-28.0.0-alpha1.aar/35ece4bff7d309808107fef1796123ef/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:customview:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/customview-28.0.0-alpha1.aar/35ece4bff7d309808107fef1796123ef/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0-alpha1.aar/888416bde8308ef575bdd36ec6b5966c/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0-alpha1.aar/888416bde8308ef575bdd36ec6b5966c/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0-alpha1.aar/e79042f18b4bd799abeea13f3bce6f90/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0-alpha1.aar/e79042f18b4bd799abeea13f3bce6f90/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-compat:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha1.aar/4f81c1933e09fe280e2c5f526ad5dfe0/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:support-compat:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha1.aar/4f81c1933e09fe280e2c5f526ad5dfe0/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:documentfile:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0-alpha1.aar/4ef4e3cf81ce3cd3f8b1d3a15145f27c/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:documentfile:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0-alpha1.aar/4ef4e3cf81ce3cd3f8b1d3a15145f27c/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0-alpha1.aar/5520799c117480d8f084701cf2568481/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0-alpha1.aar/5520799c117480d8f084701cf2568481/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:print:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/print-28.0.0-alpha1.aar/c9f4c29975483fa1d5b334f53b186d86/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:print:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/print-28.0.0-alpha1.aar/c9f4c29975483fa1d5b334f53b186d86/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:interpolator:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0-alpha1.aar/10e5a30e38e01e2052f1cd2cd693fa76/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:interpolator:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0-alpha1.aar/10e5a30e38e01e2052f1cd2cd693fa76/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0-alpha1.aar/dcce913609ae5030be48034eea2420b6/AndroidManifest.xml:21:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0-alpha1] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0-alpha1.aar/dcce913609ae5030be48034eea2420b6/AndroidManifest.xml:21:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0e3f0b3296bb736c232b09308191fd3f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/0e3f0b3296bb736c232b09308191fd3f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8fae72b406fd9d68d5db91357e9bfe1b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8fae72b406fd9d68d5db91357e9bfe1b/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/d4aa7ab182e1c25ea4a24479109afe6d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/d4aa7ab182e1c25ea4a24479109afe6d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f45e3dd7e1a25b0958a5337b862c5e65/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/jorlop01/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/f45e3dd7e1a25b0958a5337b862c5e65/AndroidManifest.xml:20:5-44
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+		ADDED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml
+		INJECTED from /home/jorlop01/pmm/SoloBici/app/src/main/AndroidManifest.xml

@@ -4,11 +4,15 @@ import java.io.Serializable;
 
 public class Pais implements Serializable {
     private String pais;
+    private int capitales;
 
-    public Pais(String pais){
-        this.setPais(pais);
 
+
+    public Pais(String pais, int capitales){
+        this.pais=pais;
+        this.capitales=capitales;
     }
+
 
     public String getPais() {
         return pais;
@@ -18,5 +22,11 @@ public class Pais implements Serializable {
         this.pais = pais;
     }
 
+    public int getCapitales() {
+        return capitales;
+    }
 
+    public void setCapitales(int capitales) {
+        this.capitales = capitales;
+    }
 }
