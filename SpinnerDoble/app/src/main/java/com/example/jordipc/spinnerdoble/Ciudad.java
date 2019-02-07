@@ -3,12 +3,14 @@ package com.example.jordipc.spinnerdoble;
 public class Ciudad {
     private String ciudad;
     private int poblacion;
+    private int imagen;
 
-
-    public Ciudad(String ciudad, int poblacion){
-        this.setCiudad(ciudad);
-        this.setPoblacion(poblacion);
+    public Ciudad(String ciudad, int poblacion, int imagen){
+        this.ciudad=ciudad;
+        this.poblacion=poblacion;
+        this.imagen=imagen;
     }
+
 
     public String getCiudad() {
         return ciudad;
@@ -24,5 +26,13 @@ public class Ciudad {
 
     public void setPoblacion(int poblacion) {
         this.poblacion = poblacion;
+    }
+
+    public int getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(int imagen) {
+        this.imagen = imagen;
     }
 }

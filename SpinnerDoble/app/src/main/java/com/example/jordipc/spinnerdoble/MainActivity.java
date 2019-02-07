@@ -1,8 +1,12 @@
 package com.example.jordipc.spinnerdoble;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
+import android.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,11 +18,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     Spinner spinner;
     Spinner spinner2;
+    int imagen;
 
     public int indice;
+    public int indice2;
+
+    ArrayList imagenes = new ArrayList();
 
     public Pais[] pais = new Pais[]{
 
@@ -28,9 +38,12 @@ public class MainActivity extends AppCompatActivity {
     };
     public Ciudad[][] ciudad = new Ciudad[][]{
 
-            {new Ciudad("Valencia ", 1000000), new Ciudad("Madrid",600000),new Ciudad("Sevilla",500000)},
-            {new Ciudad("Paris ",8000000), new Ciudad("Niza",1000000),new Ciudad("Burdeos",200000)},
-            {new Ciudad("Berlin ",8000000), new Ciudad("Munich",5000000),new Ciudad("Frankfurt",600000)},
+
+            {new Ciudad("Valencia ", 1000000,R.drawable.valencia), new Ciudad("Madrid",600000,R.drawable.madrid),new Ciudad("Sevilla",500000,R.drawable.sevilla)},
+            {new Ciudad("Paris ",8000000,R.drawable.paris), new Ciudad("Niza",1000000,R.drawable.niza),new Ciudad("Burdeos",200000,R.drawable.burdeos)},
+            {new Ciudad("Berlin ",8000000,R.drawable.berlin), new Ciudad("Munich",5000000,R.drawable.munich),new Ciudad("Frankfurt",600000,R.drawable.frankfurt)},
+
+
     };
 
 
@@ -38,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
         spinner = (Spinner) findViewById(R.id.spinner);
@@ -61,6 +75,21 @@ public class MainActivity extends AppCompatActivity {
 
         AdaptadorZonasCiudad miAdaptador1 = new AdaptadorZonasCiudad(this);
         spinner2.setAdapter(miAdaptador1);
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+
+                imagen = ciudad[indice][position].getImagen();
+                addFragment();
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
     }
@@ -122,7 +151,22 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+
+        }
+        public void addFragment() {
+
+        Fragment newFragment = SimpleFragment.newInstance(imagen);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(R.id.fragmentShow, newFragment);
+        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+
+        ft.addToBackStack(null);
+        ft.commit();
     }
-}
+
+    }
+
+
+
 
 
