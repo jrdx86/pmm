@@ -75,5 +75,8 @@ public class DatabaseHelper {
     public int delete(String table, String where, String[] whereArgs) {
         return mDb.delete(table, where, whereArgs);
     }
+    public Cursor query(String query, String [] arg){
+        return mDb.rawQuery(query, arg);
+    }
 }
 
