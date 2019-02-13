@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public int indice;
     public int indice2;
 
+
     ArrayList imagenes = new ArrayList();
 
     public Pais[] pais = new Pais[]{
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
             {new Ciudad("Valencia ", 1000000,R.drawable.valencia), new Ciudad("Madrid",600000,R.drawable.madrid),new Ciudad("Sevilla",500000,R.drawable.sevilla)},
             {new Ciudad("Paris ",8000000,R.drawable.paris), new Ciudad("Niza",1000000,R.drawable.niza),new Ciudad("Burdeos",200000,R.drawable.burdeos)},
-            {new Ciudad("Berlin ",8000000,R.drawable.berlin), new Ciudad("Munich",5000000,R.drawable.munich),new Ciudad("Frankfurt",600000,R.drawable.frankfurt)},
+            {new Ciudad("Berlin ",8000000,R.drawable.berlin), new Ciudad("Munich",5000000,R.drawable.munich),new Ciudad("Frankfurt",600000,R.drawable.frankfurt)}
 
 
     };
@@ -58,9 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
         AdaptadozZonas miAdaptador = new AdaptadozZonas(this);
         spinner.setAdapter(miAdaptador);
-
-
-
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                indice = position;
@@ -78,9 +76,8 @@ public class MainActivity extends AppCompatActivity {
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-
-                imagen = ciudad[indice][position].getImagen();
+                indice2=position;
+                imagen = ciudad[indice][indice2].getImagen();
                 addFragment();
 
             }
