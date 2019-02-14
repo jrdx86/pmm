@@ -35,7 +35,7 @@ public class Globals {
     public static final String CREATE_TABLE_COUNTRY = String.format(
             "CREATE TABLE IF NOT EXISTS %s (" +
                     "%s INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    "%s TEXT NOT NULL"+
+                    "%s TEXT NOT NULL,"+
                     "%s TEXT NOT NULL)",
             TABLE_COUNTRY,
             TABLE_COUNTRY_ID,

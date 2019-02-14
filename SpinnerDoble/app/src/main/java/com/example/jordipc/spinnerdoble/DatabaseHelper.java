@@ -31,8 +31,8 @@ public class DatabaseHelper {
 
         }
         private void deleteTables(SQLiteDatabase db) {
-            db.execSQL("DROP TABLE IF EXISTS " + Globals.TABLE_CLIENT_NAME);
-            db.execSQL("DROP TABLE IF EXISTS " + Globals.TABLE_COUNTRY_NAME);
+            db.execSQL("DROP TABLE IF EXISTS " + Globals.TABLE_CLIENT);
+            db.execSQL("DROP TABLE IF EXISTS " + Globals.TABLE_COUNTRY);
 
             }
         private void fillTables(SQLiteDatabase db) {
@@ -56,22 +56,26 @@ public class DatabaseHelper {
     public void close() {
         mDbHelper.close();
     }
+
     public Cursor getItems(String table, String[] columns, String selection, String[] selArgs,
                            String orderBy) {
         return mDb.query(table, columns, selection, selArgs, null, null, orderBy);
     }
+
     public long insertItem(String table, String[][] data) {
         ContentValues initialValues = new ContentValues();
         for (String[] field : data)
             initialValues.put(field[0], field[1]);
         return mDb.insert(table, null, initialValues);
     }
+
     public int updateItem(String table, String where, String[] whereArgs, String[][] data) {
         ContentValues contentValues = new ContentValues();
         for (String[] field : data)
             contentValues.put(field[0], field[1]);
         return mDb.update(table, contentValues, where, whereArgs);
     }
+
     public int delete(String table, String where, String[] whereArgs) {
         return mDb.delete(table, where, whereArgs);
     }
