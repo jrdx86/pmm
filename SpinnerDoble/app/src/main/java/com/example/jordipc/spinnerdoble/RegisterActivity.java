@@ -71,34 +71,22 @@ public class RegisterActivity extends AppCompatActivity {
         String username = usernameInput.getText().toString();
         String password = passwordInput.getText().toString();
         String[] userData = {username, password};
-        String[] columns = {
+        String[][] data = {
 
-                Globals.TABLE_CLIENT_NAME,
-                Globals.TABLE_CLIENT_PASSWORD
+                {Globals.TABLE_CLIENT_NAME},
+                {Globals.TABLE_CLIENT_PASSWORD}
         };
         Cursor cursor;
         dbHelper.open();
-        cursor = dbHelper.insertItem(Globals.TABLE_CLIENT,columns );
-        if (cursor.moveToFirst()) {
-            Intent intent = new Intent(this, Pantalla1.class);
-            Client client = new Client(cursor.getString(1), cursor.getString(2));
-            Bundle bundle = new Bundle();
-            bundle.putSerializable(LOGGED_CLIENT, client);
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }else{
-            Toast.makeText(this,"No estas registrado, por favor date de alta",Toast.LENGTH_LONG).show();
-        }
+        cursor = dbHelper.insertItem(Globals.TABLE_CLIENT,data);
+
         if (!cursor.isClosed()) {
             cursor.close();
         }
         dbHelper.close();
     }
-
-
-
     }
 
 
-}
+
 
